@@ -1,0 +1,2 @@
+Set up material tabs
+Set up react-native-vector-icons
