@@ -4,7 +4,7 @@ import {View, Text } from 'react-native';
 
 const ScheduleCardComponents = () => {
     return (
-        <Card elevation={100} style={{marginHorizontal: 16, marginVertical: 16, borderRadius: 32, width: 128}}>
+        <Card style={{marginHorizontal: 16, marginVertical: 16, borderRadius: 32, width: 128}}>
             <Card.Content style={{justifyContent: 'center'}}>
                 <Text style={{fontSize: 32, fontVariant: ['small-caps'], color: '#38557D', justifyContent: 'center', textAlign: 'center', fontWeight: 'bold', marginBottom: -8}}>Mon</Text>
                 <Text style={{fontSize: 32, fontVariant: ['small-caps'], color: '#38557D', justifyContent: 'center', textAlign: 'center', fontWeight: 'bold', marginBottom: 8}}>19</Text>

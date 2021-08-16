@@ -14,7 +14,7 @@ import ScheduleCardComponents from '../components/ScheduleCardComponent';
 const ScheduleScreen = ({navigation}) => {
     return (
         <SafeAreaView backgroundColor="white">
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}> 
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={[styles.scrollview]}> 
                 <ScheduleCardComponents/>
                 <ScheduleCardComponents/>
                 <ScheduleCardComponents/>
@@ -24,7 +24,7 @@ const ScheduleScreen = ({navigation}) => {
 
             <View style={{marginTop: 8, marginHorizontal: 16, height: 1, backgroundColor: '#707070'}} />
 
-            <ScrollView height={60}>
+            <ScrollView height={360}>
                 <ScheduleCardComponents/>
                 <ScheduleCardComponents/>
 
@@ -35,3 +35,9 @@ const ScheduleScreen = ({navigation}) => {
 }
 
 export default ScheduleScreen;
+
+const styles = StyleSheet.create({
+    scrollview: {
+        backgroundColor: 'transparent'
+    }
+})
