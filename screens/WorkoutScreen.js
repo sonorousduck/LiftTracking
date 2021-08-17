@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import MyCheckbox from '../components/Checkbox';
 import IndividualWorkoutCard from '../components/IndividualWorkoutCard';
+import MyFAB from '../components/MyFAB';
+
 
 
 const WorkoutScreen = ({navigation}) => {
@@ -30,6 +32,7 @@ const WorkoutScreen = ({navigation}) => {
               <IndividualWorkoutCard />
               
             </ScrollView>
+            <MyFAB/>
         </SafeAreaView>
     )
 }
