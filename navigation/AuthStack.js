@@ -4,12 +4,9 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 
 
 import HomeScreen from '../screens/HomeScreen';
-import WorkoutScreen from '../screens/WorkoutScreen';
-import ScheduleScreen from '../screens/ScheduleScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
-import CommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import EntypoIcons from 'react-native-vector-icons/Entypo'
+
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -26,8 +23,6 @@ function bottomTabs() {
             barStyle= {{ backgroundColor: "#C8C8CF"}}
         >
             <Tab.Screen name="Home" component={HomeScreen} options={{ tabBarLabel: "Home", tabBarIcon: ({ color }) => ( <Icon name="ios-home-outline" size={25} color={color}/>) }} />
-            <Tab.Screen name="Workout" component={WorkoutScreen} options={{ tabBarLabel: "Workout", tabBarIcon: ({ color }) => ( <CommunityIcons name="dumbbell" size={25} color={color}/>) }} />
-            <Tab.Screen name="Schedule" component={ScheduleScreen} options={{ tabBarLabel: "Schedule", tabBarIcon: ({ color }) => ( <EntypoIcons name="calendar" size={25} color={color}/>) }} />
             <Tab.Screen name="Settings" component={SettingsScreen} options={{ tabBarLabel: "Settings", tabBarIcon: ({ color }) => ( <Icon name="ios-settings-outline" size={25} color={color}/>) }} />
         </Tab.Navigator>
     )

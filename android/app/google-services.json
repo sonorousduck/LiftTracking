@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "178701219422",
+    "project_id": "reactpractice-8e288",
+    "storage_bucket": "reactpractice-8e288.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178701219422:android:2af14ff1193d8dd44c66cf",
+        "android_client_info": {
+          "package_name": "com.lifttracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178701219422-e8tc7c06bktimg67k1t2s0v4o3eje71u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL0vKyLFdOIcmKJ9FXaexqVxwkcMwxZSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178701219422-e8tc7c06bktimg67k1t2s0v4o3eje71u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
