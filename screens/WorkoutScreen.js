@@ -21,7 +21,7 @@ const WorkoutScreen = ({navigation}) => {
              <ScrollView
                 contentInsetAdjustmentBehavior="automatic" >
                 <View style={{flexDirection: 'row'}}>
-                  <Text style={{flex: 1, padding: 8, fontSize: 16, marginTop: 8, color: '#32507A', fontWeight: 'bold'}}> Today's Workout</Text> 
+                  <Text style={{flex: 1, padding: 8, fontSize: 16, marginTop: 8, color: '#32507A', fontWeight: 'bold' }}> Today's Workout</Text> 
                   <MyCheckbox style={{flex: 1}} />
                 </View>
                 <View style={{marginHorizontal: 16, height: 1, backgroundColor: 'black'}} />
