@@ -3,7 +3,6 @@ import auth from '@react-native-firebase/auth';
 import React, {useEffect, useState} from 'react';
 
 
-
 import AppStack from './AppStack';
 import AuthStack from './AuthStack';
 
