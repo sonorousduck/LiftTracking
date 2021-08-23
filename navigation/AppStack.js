@@ -7,6 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import WorkoutScreen from '../screens/WorkoutScreen';
 import ScheduleScreen from '../screens/ScheduleScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import RepeatingWorkoutDetails from '../screens/RepeatingWorkoutDetails'
 import Icon from 'react-native-vector-icons/Ionicons';
 import CommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import EntypoIcons from 'react-native-vector-icons/Entypo'
@@ -45,6 +46,11 @@ const mainStack = ({navigation}) => (
         <Stack.Screen
             name="Navigator"
             component = {bottomTabs}
+        />
+
+        <Stack.Screen
+            name="CreateDefaultWorkout"
+            component = {RepeatingWorkoutDetails}
         />
         
     </Stack.Navigator>

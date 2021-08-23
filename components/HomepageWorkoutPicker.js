@@ -19,7 +19,7 @@ const HomepageWorkoutPicker = () => {
                     <Picker.Item label="Back" value="back" />
                     <Picker.Item label="Legs" value="legs" />
                     <Picker.Item label="Abs" value="abs" />
-                    <Picker.Item label="??" value="??" />
+                    <Picker.Item label="Cardio" value="cardio" />
                 </Picker>
             </View>
     );

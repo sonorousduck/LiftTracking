@@ -16,26 +16,28 @@ import {
 import { Button } from 'react-native-paper';
 import NameAndLogo from '../components/NameAndLogo';
 import GettingTestData from '../components/GettingTestData';
+import SettingTestData from '../components/SettingTestData';
+import CreateDefaultWorkout from '../components/CreateDefaultWorkout';
 
 
 const SettingsScreen = ({navigation}) => {
-    // const ref = firestore().collection('test').doc('testing').get();
-    // console.log(ref)
-
-    // firestore()
-    //     .collection('test')
-    //     .add({
-    //         name: "Ryan Anderson",
-    //         age: 23,
-    //     })
-    //     .then(() => {console.log('User Added!')})
-
-
     const [user, setUser] = useState('');
 
     return (
         <SafeAreaView style={{flex: 1, alignItems: 'center'}}>
             <NameAndLogo/>
+            <View style={styles.container}>
+            <View style={styles.bar}></View>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => {navigation.navigate('CreateDefaultWorkout')}}
+            >
+                <Text> Add Default Workouts </Text>
+                </TouchableOpacity>
+                <View style={styles.bar}></View>
+            </View>
+
+            <SettingTestData />
             <GettingTestData />
             <Button mode="outlined" onPress={() => auth().signOut()} style={styles.logoutButton}> <EntypoIcons name="log-out" size={20} style={{color: '#32507A'}}/> <Text style={{color: '#32507A'}}> Logout </Text> </Button>
         </SafeAreaView>

@@ -7,7 +7,6 @@ import {
 } from 'react-native';
 
 const GettingTestData = (params) => {
-  const [visible, setVisible] = React.useState(true);
   const [loading, setLoading] = useState(true)
   const [testData, setTestData] = useState()
 
@@ -19,7 +18,6 @@ const GettingTestData = (params) => {
                 .get()
 
             if (testDataFetch) {
-                
                 setTestData(testDataFetch);
                 setLoading(false);
             } else {
@@ -39,7 +37,7 @@ const GettingTestData = (params) => {
   
     return (
         // <Text>Yeet</Text>
-        <Text> Yeet {testData._data.blah.toString()} </Text>
+        <Text> {testData._data.blah.toString()} </Text>
     );
     };
 }
