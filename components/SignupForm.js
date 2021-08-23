@@ -3,20 +3,30 @@ import {Dimensions, SafeAreaView, StyleSheet, TextInput, View, Text} from 'react
 import { color } from "react-native-elements/dist/helpers";
 import { Button } from 'react-native-paper';
 import auth from '@react-native-firebase/auth'
+import firestore from '@react-native-firebase/firestore';
+
 
 
 
 const SignupForm = () => {
-    const [text, onChangeText] = React.useState("")
+    const [username, onChangeUsername] = React.useState("")
     const [email, onEmailChangeText] = React.useState("")
     const [password, onChangePassword] = React.useState("")
     const [confirmPassword, onChangeConfirmPassword] = React.useState("")
 
 
-    function createAccount(email, password) {
+    function createAccount(email, password, username) {
         auth()
             .createUserWithEmailAndPassword(email, password)
             .then(() => {
+                firestore()
+                    .collection('users')
+                    .doc(username)
+                    .add({
+                        email: "Ryan Anderson",
+                        age: 23,
+                    })
+
                 console.log("Success!")
             })
             .catch(error => {
@@ -46,8 +56,8 @@ const SignupForm = () => {
     <SafeAreaView style={{alignSelf: 'center'}}>
         <TextInput
             style={styles.usernameInput}
-            onChangeText={onChangeText}
-            value={text}
+            onChangeText={onChangeUsername}
+            value={username}
             placeholder="Username"
         />
 
@@ -80,7 +90,7 @@ const SignupForm = () => {
                     if (password !== confirmPassword) {
                         console.error("Passwords do not match");
                     } else {
-                        createAccount(email, password);
+                        createAccount(email, password, username);
                     }
                 }
                 }><Text style={{color: '#38557D'}}>Create Account</Text></Button>
